@@ -26,30 +26,43 @@
         </nav>
     </h1>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">
                 <div class="row">
                     <h3>
-                        Search by liquor:
+
                     </h3>
                 </div>
                 <div class="row">
-                    1. User input box here, with submit button, triggers search in cocktailDB api for drinks
-                    containing this liquor (whiskey, tequila, etc)
+                    <!-- 1. User input box here, with submit button, triggers search in cocktailDB api for drinks
+                    containing this liquor (whiskey, tequila, etc) -->
                     <!-- input needs id of "input2" -->
                     <!-- Submit button needs an id "submit1" -->
+                    <form>
+                        Search by liquor:<br>
+                        <input type="text" id="input2" name="Search by liquor"><br>
+                        <button type="button" id="submit1">Submit</button>
+                    </form>
                 </div>
                 <div class="row">
                     <h3>
-                        Search by Name:
+
+                        <!--1. User input box here, with submit button, triggers search for drinks with this name (margarita, old fashioned, etc)-->
+                        <!-- Input needs id of "input2" -->
+                        <!-- Submit button needs an id "submit2" -->
+
                     </h3>
                 </div>
                 <div class="row">
-                    1. User input box here, with submit button, triggers search for drinks with this name (margarita,
-                    old fashioned, etc)
-                    <!-- Input needs id of "input2" -->
-                    <!-- Submit button needs an id "submit2" -->
+                    <form>
+                        your favorite cocktail:<br>
+                        <input type="text" id="input2" name="Your favorite cocktail"><br>
+                        <button type="button" id="submit2">Submit</button>
+                    </form>
+
+
+
                 </div>
                 <br>
                 <div class="row">
@@ -78,10 +91,6 @@
         </div>
     </div>
 
-
-
-
-
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -90,10 +99,10 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <footer>
-        <h3>Prestige Worldwide</h3>
-        <h4>Wide</h4>
-        <h5>Wide</h5>
+    <footer class="page-footer font-small blue">
+        <div class="footer-copyright text-center py-3">© UCLA-Coding School:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> Prestige World Wide Wide</a>
+        </div>
     </footer>
 </body>
 
