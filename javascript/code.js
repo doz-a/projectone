@@ -1,3 +1,5 @@
+// Make sure you're working in a branch! "git branch" in terminal to check if you're in the master or the branch
+
 console.log('ryan bidgoli');
 
 // document ready 
@@ -14,3 +16,4 @@ console.log('ryan bidgoli');
 
 // append 5 tutorial videos to the youtube div each one gets a row 
 
+// Make sure you're working in a branch! "git branch" in terminal to check if you're in the master or the branch
