@@ -3,6 +3,12 @@
 
 // document ready 
 
+// link for search cocktail by name api : 
+// https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka
+
+// link for search cocktail by ingredient api :
+// https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin
+
 // ajax function to search for liquor preference 
 // liquor preference needs an input box 
 
