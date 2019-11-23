@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+
 </head>
 
 <body>
@@ -53,6 +54,10 @@
             </form>
         </div>
     </nav>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <button onclick="authenticate().then(loadClient)">authorize and load</button>
+    <button onclick="execute()">execute</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- show youtube playlist -->
