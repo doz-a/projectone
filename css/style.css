@@ -6,6 +6,26 @@ h1 {
     background-color: red;
 }
 
+.container {
+    width: 70%;
+    padding: 1%;
+    background-color: white;
+    margin-top: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.form-control {
+    margin-right: 10%;
+}
+
+body {
+    background: url("./backgroundconfetti\ copy.jpg")
+}
+
+
+
 /* MAKE SURE you're working in a branch! "git branch" in terminal to check if you're in the master or the branch */
 
 /* git pull origin master at each session that you begin!  */
