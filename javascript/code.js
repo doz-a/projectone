@@ -34,7 +34,9 @@ $(document).ready(function () {
 
             // Append them to drink list 
             $("#drinkList").append(
-                "<p>" + element.strDrink + "</p>",
+                "<hr>",
+                "<h5><p>" + element.strDrink + "</p></h5>",
+                // "<hr>",
                 "<img src ='" + element.strDrinkThumb + "'>");
         }
 
