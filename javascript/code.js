@@ -4,12 +4,13 @@
 $(document).ready(function () {
 
     // on click
-    $("#ingedientButton").on("click", function () {
-        $("#ingredientInput");
-        populateDrinkList();
+    $("#ingredientButton").on("click", function () {
+        event.preventDefault();
 
-        // Clears button box every click 
-        $("#drinkList").empty();
+        // This line grabs the input from the textbox
+        var ingredient = $("#ingredientInput").val().trim();
+        populateDrinkList(ingredient);
+
     });
     // on click
     // populateDrinkList(ingredient);
@@ -18,15 +19,20 @@ $(document).ready(function () {
     // document.getElementById("ingedientInput").value = ingredient;
 
     // Populates Drink List function 
-    function populateDrinkList() {
+    function populateDrinkList(ingredient) {
 
         // Start ajax cocktailDB
-        var ingredient = "gin";
+        // var ingredient = $("#ingredientInput").val().trim();
+        // console.log("capture input successful");
+        // var ingredient = "gin"
         var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingredient;
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
+
+            // Clears drink list every click 
+            $("#drinkList").empty();
 
             // Sets max drink count 
             var drinkCount = 10;
