@@ -1,11 +1,46 @@
 
-h1 { 
-    color: red;
+h1 { color: greenyellow;
+	font-size: 102px;
+	-webkit-text-stroke: 2px black;
+
+
+
+    /* color:greenyellow; */
+    text-shadow:black;
+font-weight: 700;
 font-family: cursive;
-font-size: 100px;
-background-color: white;
+/* font-size: 100px; */
+background-color: beige;
 text-align: center;
-width: 100%
+width: 100%;
+outline: auto;
+outline-color:black;
+background-image: url(./cocktails2.jpg);
+;
+}
+
+
+#nameDiv {
+  padding-top: 10.8%;
+}
+
+
+
+h3 {
+  text-align: left;
+}
+
+
+
+#nameButton {
+ 
+  color: yellowgreen;
+
+}
+#ingredientButton {
+ 
+  color: yellowgreen;
+
 }
 
 
@@ -14,16 +49,21 @@ width: 100%
 .container {
     width: 70%;
     padding: 1%;
-    background-color: white;
+    background-color: beige;
     margin-top: 10%;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 40px;
+    outline-color: black;
     
 }
 
 .form-control {
     margin-right: 10%;
+}
+
+h5 {
+  font: bold
 }
 
 /* body {

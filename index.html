@@ -45,26 +45,26 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                <!-- <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    </a> -->
+                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Action</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+                    </div> -->
+                <!-- </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-            </form>
+             <form class="form-inline my-2 my-lg-0"> -->
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+                <!-- </form>  -->
         </div>
     </nav>
 
@@ -75,39 +75,43 @@
 
     <div class="container">
 
-        <h1>
-            <!-- <nav class="navbar navbar-light bg-light">
-                <span class="navbar-brand mb-0 h1"> -->
-            <h1>
-                Let's have a toast
-                <br>
-                <i class="fas fa-cocktail"></i>
-                <!-- </span>
-            </nav> -->
-            </h1>
 
-            <!-- <input class="form-control" type="text" placeholder="Search By Liquor" aria-label="Search">
+        <!-- <nav class="navbar navbar-light bg-light">
+                <span class="navbar-brand mb-0 h1"> -->
+        <h1>
+            Let's have a toast
+
+            <i class="fas fa-cocktail"></i>
+            <!-- </span>
+            </nav> -->
+        </h1>
+
+        <!-- <input class="form-control" type="text" placeholder="Search By Liquor" aria-label="Search">
         <button id=drinkButton> Submit </button> -->
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div id="ingredientDiv">
                             <h3>
                                 Search by liquor/Ingredient:
                             </h3>
                         </div>
+
                         <div class="row">
                             <input class="form-control" id="ingedientInput" type="text"
                                 placeholder="Search By Ingredient" aria-label="Search">
-                            <button id=ingedientButton> Submit </button>
-
-                            1. User input box here, with submit button, triggers search in cocktailDB api for drinks
-                            containing this liquor (whiskey, tequila, etc)
-                            <!-- input needs id of "input2" -->
-                            <!-- Submit button needs an id "submit1" -->
+                            <button id=ingredientButton> Submit </button>
                         </div>
-                        <div class="row">
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div id="nameDiv">
+
                             <h3>
                                 Search by Name:
                             </h3>
@@ -116,56 +120,84 @@
                             <input class="form-control" id="nameInput" type="text" placeholder="Search By Name"
                                 aria-label="Search">
                             <button id=nameButton> Submit </button>
-                            1. User input box here, with submit button, triggers search for drinks with this name
-                            (margarita,
-                            old fashioned, etc)
-                            <!-- Input needs id of "input2" -->
-                            <!-- Submit button needs an id "submit2" -->
                         </div>
-                        <br>
+                    </div>
+                </div>
+
+
+            </div>
+            <br>
+            <hr>
+
+
+            <!-- <div class="row">
+                <div class="col-sm-5">
+                    <div class="row">
+                        <div id="nameDiv">
+
+                            <h3>
+                                Search by Name:
+                            </h3>
+                        </div>
                         <div class="row">
-                            <h4>
-                                Drink List:
-                            </h4>
-                        </div>
-                        <br>
-                        <div class="row" id="drinkList">
-                            10 drinks from cocktailDB appear here, with clickable names
-                            <br>
-                            <br>
-                            <h5 id="d1">Name of drink</h5>
-                            <br>
-                            Brief description with ingredients as well
-                        </div>
-                        <h4>Design your own drink!</h4>
-                        <div class="row" id="canvas">
-                            HTML 5 Canvas to design drinks goes here
+                            <input class="form-control" id="nameInput" type="text" placeholder="Search By Name"
+                                aria-label="Search">
+                            <button id=nameButton> Submit </button>
                         </div>
                     </div>
-                    <div class="col-sm-8" id="youTube">
-                        2. User clicks on a drink from the drink list, and several drink tutorial videos stacked on top
-                        of
-                        each
-                        other appear here
-                    </div>
+                </div>
+            </div> -->
+
+            <br>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>
+                        Drink List:
+                    </h4>
+                </div>
+                <br>
+                <div class="row" id="drinkList">
+                    10 drinks from cocktailDB appear here, with clickable names
+                    <br>
+                    <br>
+                    <h5 id="d1">Name of drink</h5>
+                    <br>
+                    Brief description with ingredients as well
                 </div>
             </div>
 
 
+            <h4>Design your own drink!</h4>
+            <div class="row" id="canvas">
+                HTML 5 Canvas to design drinks goes here
+            </div>
+        </div>
+        <div class="col-sm-8" id="youTube">
+            <!-- 2. User clicks on a drink from the drink list, and several drink tutorial videos stacked on top
+                        of
+                        each
+                        other appear here -->
+        </div>
+    </div>
+    </div>
 
 
 
-            <script src="https://code.jquery.com/jquery.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous"></script>
 
-            <footer>
-                Prestige WorldWide
-            </footer>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <footer>
+        Prestige WorldWide
+    </footer>
     </div>
 </body>
 
