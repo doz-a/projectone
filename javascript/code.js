@@ -6,17 +6,12 @@ $(document).ready(function () {
     // on click
     $("#ingredientButton").on("click", function () {
         event.preventDefault();
-
+        console.log("buttonworks");
         // This line grabs the input from the textbox
         var ingredient = $("#ingredientInput").val().trim();
         populateDrinkList(ingredient);
 
     });
-    // on click
-    // populateDrinkList(ingredient);
-
-    // var ingredient = "ingredient"
-    // document.getElementById("ingedientInput").value = ingredient;
 
     // Populates Drink List function 
     function populateDrinkList(ingredient) {
@@ -57,6 +52,7 @@ $(document).ready(function () {
     }
     // End populate drink list function 
 })
+// End document ready
 
 // link for search cocktail by name api : 
 // https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka

@@ -1,49 +1,41 @@
-h1 { color: greenyellow;
-	font-size: 102px;
-	-webkit-text-stroke: 2px black;
-
-
-
+h1 {
+    color: greenyellow;
+    font-size: 102px;
+    -webkit-text-stroke: 2px black;
     /* color:greenyellow; */
-    text-shadow:black;
-font-weight: 700;
-font-family: cursive;
-/* font-size: 100px; */
-background-color: beige;
-text-align: center;
-width: 100%;
-outline: auto;
-outline-color:black;
-background-image: url(./cocktails2.jpg);
-;
+    text-shadow: black;
+    font-weight: 700;
+    font-family: cursive;
+    /* font-size: 100px; */
+    background-color: beige;
+    text-align: center;
+    width: 100%;
+    outline: auto;
+    outline-color: black;
+    background-image: url(./cocktails2.jpg);
+    ;
 }
 
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
 
 #nameDiv {
-  padding-top: 10.8%;
+    padding-top: 10.8%;
 }
-
-
 
 h3 {
-  text-align: left;
+    text-align: left;
 }
-
-
 
 #nameButton {
- 
-  color: yellowgreen;
-
+    color: yellowgreen;
 }
+
 #ingredientButton {
- 
-  color: yellowgreen;
-
+    color: yellowgreen;
 }
-
-
-
 
 .container {
     width: 70%;
@@ -54,7 +46,6 @@ h3 {
     margin-left: auto;
     margin-bottom: 40px;
     outline-color: black;
-    
 }
 
 .form-control {
@@ -62,70 +53,68 @@ h3 {
 }
 
 h5 {
-  font: bold
+    font: bold
 }
 
 /* body {
     background: url("./backgroundconfetti\ copy.jpg")
 } */
 
-
-
 /* MAKE SURE you're working in a branch! "git branch" in terminal to check if you're in the master or the branch */
 
 /* git pull origin master at each session that you begin!  */
 
 html {
-    height:100%;
-  }
-  
-  body {
-    margin:0;
-  }
-  
-  .bg {
-    animation:slide 3s ease-in-out infinite alternate;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
     background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-    bottom:0;
-    left:-50%;
-    opacity:.5;
-    position:fixed;
-    right:-50%;
-    top:0;
-    z-index:-1;
-  }
-  
-  .bg2 {
-    animation-direction:alternate-reverse;
-    animation-duration:4s;
-  }
-  
-  .bg3 {
-    animation-duration:5s;
-  }
-  
-  .content {
-    background-color:rgba(255,255,255,.8);
-    border-radius:.25em;
-    box-shadow:0 0 .25em rgba(0,0,0,.25);
-    box-sizing:border-box;
-    left:50%;
-    padding:10vmin;
-    position:fixed;
-    text-align:center;
-    top:50%;
-    transform:translate(-50%, -50%);
-  }
-  
-  h2 {
-    font-family:monospace;
-  }
-  
-  @keyframes slide {
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    font-family: monospace;
+}
+
+@keyframes slide {
     0% {
-      transform:translateX(-25%);
+        transform: translateX(-25%);
     }
     100% {
-      transform:translateX(25%);
+        transform: translateX(25%);
     }
-  }
+}
