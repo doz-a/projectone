@@ -15,7 +15,12 @@ h1 {
     background-image: url(./cocktails2.jpg);
     ;
 }
-
+canvas{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    border: 1px solid gray;
+}
 /* img {
     max-width: 65px;
     max-height: 65px;

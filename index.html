@@ -83,10 +83,10 @@
 
 
                 <div class="col-sm-6">
-                    <div class="row" id="canvas">
-                        <h3>
-                            HTML 5 Canvas to design drinks goes here
-                        </h3>
+                    <div class="row">
+                        <canvas id="canvas" width="100" height="100"></canvas>
+                        <!--button doesn't work yet-->
+                        <input type="submit" value="Clear Sketchpad" onclick="clearCanvas(canvas,context);"> 
                     </div>
                 </div>
 
@@ -163,7 +163,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="./javascript/code.js"></script>
-
+    <script src="./javascript/app.js"></script>
     <footer>
         Prestige WorldWide
     </footer>
