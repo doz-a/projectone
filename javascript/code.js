@@ -48,13 +48,16 @@ $(document).ready(function () {
                     // "<img src ='" + element.strDrinkThumb + "'>",
                     // "</div>"
 
-                    '<div class="card w-50">',
-                    '<img src="' + element.strDrinkThumb + '" class="card-img-top">',
-                    '<div class="card-body">',
-                    '<h5 class="card-title">' + element.strDrink + '</h5>',
-                    '</div>',
-                    '</div>',
+                    // Append card here is broken 
+                    // '<div class="card w-50">',
+                    // '<img src="' + element.strDrinkThumb + '" class="card-img-top">',
+                    // '<div class="card-body">',
+                    // '<h5 class="card-title">' + element.strDrink + '</h5>',
+                    // '</div>',
+                    // '</div>',
 
+                    // Append card working 
+                    '<div class="card w-50"><img src="' + element.strDrinkThumb + '" class="card-img-top"><div class="card-body"><h6 class="card-title">' + element.strDrink + '</h6></div></div>'
                 );
             }
         });
