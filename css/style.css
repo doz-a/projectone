@@ -16,10 +16,10 @@ h1 {
     ;
 }
 
-img {
-    max-width: 100px;
-    max-height: 100px;
-}
+/* img {
+    max-width: 65px;
+    max-height: 65px;
+} */
 
 #nameDiv {
     padding-top: 10.8%;
