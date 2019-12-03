@@ -43,9 +43,19 @@ $(document).ready(function () {
 
                 // Append them to drink list 
                 $("#drinkList").append(
-                    "<hr>",
-                    "<h5><p>" + element.strDrink + "</p></h5>",
-                    "<img src ='" + element.strDrinkThumb + "'>");
+                    // "<div class='col-sm-4'>",
+                    // "<h5><p>" + element.strDrink + "</h5></p>",
+                    // "<img src ='" + element.strDrinkThumb + "'>",
+                    // "</div>"
+
+                    '<div class="card w-50">',
+                    '<img src="' + element.strDrinkThumb + '" class="card-img-top">',
+                    '<div class="card-body">',
+                    '<h5 class="card-title">' + element.strDrink + '</h5>',
+                    '</div>',
+                    '</div>',
+
+                );
             }
         });
         // End ajax cocktailDB

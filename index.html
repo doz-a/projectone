@@ -39,26 +39,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                <!-- <li class="nav-item dropdown">
-                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a> -->
-                <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div> -->
-                <!-- </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-             <form class="form-inline my-2 my-lg-0"> -->
-                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-                <!-- </form>  -->
         </div>
     </nav>
 
@@ -103,18 +83,10 @@
 
 
                 <div class="col-sm-6">
-                    <div class="row">
-                        <div id="nameDiv">
-
-                            <h3>
-                                Search by Name:
-                            </h3>
-                        </div>
-                        <div class="row">
-                            <input class="form-control" id="nameInput" type="text" placeholder="Search By Name"
-                                aria-label="Search">
-                            <button id=nameButton> Submit </button>
-                        </div>
+                    <div class="row" id="canvas">
+                        <h3>
+                            HTML 5 Canvas to design drinks goes here
+                        </h3>
                     </div>
                 </div>
 
@@ -123,56 +95,59 @@
             <br>
             <hr>
 
-
-            <!-- <div class="row">
-                <div class="col-sm-5">
-                    <div class="row">
-                        <div id="nameDiv">
-                            <h3>
-                                Search by Name:
-                            </h3>
-                        </div>
-                        <div class="row">
-                            <input class="form-control" id="nameInput" type="text" placeholder="Search By Name"
-                                aria-label="Search">
-                            <button id=nameButton> Submit </button>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
             <br>
 
-
             <div class="row">
-                <div class="col-sm-12">
+
+                <!-- Drink list column start -->
+                <div class="col-sm-5">
                     <h4>
                         Drink List:
                     </h4>
-                </div>
-                <br>
-                <div class="row" id="drinkList">
-                    10 drinks from cocktailDB appear here, with clickable names
                     <br>
-                    <br>
-                    <h5 id="d1">Name of drink</h5>
-                    <br>
-                    Brief description with ingredients as well
-                </div>
-            </div>
+                    <div class="row" id="drinkList">
+                        <div class="card w-50">
+                            <img src="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">69 special</h5>
+                            </div>
+                        </div>
+                        <div class="card w-50">
+                            <img src="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">69 special</h5>
+                            </div>
+                        </div>
+                        <div class="card w-50">
+                            <img src="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">69 special</h5>
+                            </div>
+                        </div>
+                        <div class="card w-50">
+                            <img src="https://www.thecocktaildb.com/images/media/drink/rrtssw1472668972.jpg"
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">69 special</h5>
+                            </div>
+                        </div>
 
-
-            <h4>Design your own drink!</h4>
-            <div class="row" id="canvas">
-                HTML 5 Canvas to design drinks goes here
-            </div>
-        </div>
-        <div class="col-sm-8" id="youTube">
-            <!-- 2. User clicks on a drink from the drink list, and several drink tutorial videos stacked on top
+                    </div>
+                </div>
+                <div class="col-sm-7" id="youTube">
+                    Youtube videos appear here
+                    <!-- 2. User clicks on a drink from the drink list, and several drink tutorial videos stacked on top
                         of
                         each
                         other appear here -->
+                </div>
+            </div>
+
         </div>
+
     </div>
     </div>
 
