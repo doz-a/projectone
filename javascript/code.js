@@ -3,6 +3,8 @@
 
 $(document).ready(function () {
 
+    populateDrinkList("tequila");
+
     // on click
     $("#ingredientButton").on("click", function () {
         event.preventDefault();
@@ -47,8 +49,8 @@ $(document).ready(function () {
                 $("#drinkList").append(
 
                     // ES6 
-                    `<div class="card w-50" id="${element.strDrink}">
-                        <img src=${element.strDrinkThumb} class="card-img-top">
+                    `<div class="card w-50" data-name="${element.strDrink}" "id="${element.strDrink}">
+                        <img src=${element.strDrinkThumb}  class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">${element.strDrink}</h5>
                         </div>
@@ -58,10 +60,6 @@ $(document).ready(function () {
                     // Store as a variable (drinkClickName)
                     // Input variable as the youtube ajax query 
                     // Make youtube query a function
-
-
-
-
 
                     // Append card working 
                     // '<div class="card w-50"><img src="' + element.strDrinkThumb + '" class="card-img-top"><div class="card-body"><h6 class="card-title">' + element.strDrink + '</h6></div></div>'
@@ -74,8 +72,15 @@ $(document).ready(function () {
             }
 
             // Test click function 
-            $(".card.w-50>img").on("click", function () {
+
+            // $(".card.w-50>img").on("click", function () {
+            $(".card.w-50").on("click", function () {
                 console.log("buttonworks");
+                console.log(this.getAttribute('data-name'));
+
+                var drinkNameClick = this.getAttribute('data-name');
+
+                populateVideos(drinkNameClick);
                 // On click, grab the name of the cocktail
                 // Store the name in a variable
                 // Put that variable in the youtube Query 
@@ -90,59 +95,68 @@ $(document).ready(function () {
     }
     // End populate drink list function 
 
-
-    // Start Youtube api 
-
-    var playerInfoList = [];
-    $.ajax({
-        method: 'GET',
-        url: 'https://www.googleapis.com/youtube/v3/search?',
-        data: {
+    function populateVideos(drinkNameClick) {
 
 
-            q: 'how to make long island ice tea drink',
-            part: 'snippet',
+        // Start Youtube api 
 
-            key: '',
-            // For testing purposes using 2
-            maxResults: 2
-        },
-        dataType: 'jsonp'
+        var playerInfoList = [];
+        $.ajax({
+            method: 'GET',
+            url: 'https://www.googleapis.com/youtube/v3/search?',
+            data: {
 
-    }).then(function (response) {
-        console.log(response);
-        var results = response.items;
-        $.each(results, function (index, value) {
-            var videoObj = {
-                id: 'player',
-                height: '',
-                width: '100%',
-                videoId: results[index].id.videoId
-            }
-            playerInfoList.push(videoObj);
-        });
-        onYouTubePlayerAPIReady();
-        function onYouTubePlayerAPIReady() {
-            for (var i = 0; i < playerInfoList.length; i++) {
-                console.log(playerInfoList.length);
-                player = new YT.Player('player' + [i], {
-                    height: '',
+
+                q: 'how to make ' + drinkNameClick + ' drink',
+                part: 'snippet',
+
+                key: 'AIzaSyBBC9WvAnCLIpCD6YdzdhKFonnNLl8tUi4',
+                maxResults: 5
+            },
+            dataType: 'jsonp'
+
+        }).then(function (response) {
+            console.log(response);
+            var results = response.items;
+
+            // Value parameter required, but doesn't get read 
+            $.each(results, function (index, value) {
+                var videoObj = {
+                    id: 'player',
+                    height: '25%',
                     width: '100%',
-                    videoId: playerInfoList[i].videoId
-                });
+                    videoId: results[index].id.videoId,
+
+                    // This causes quota usage to only use 20 units instead of 200 :)
+                    type: 'video'
+                }
+                playerInfoList.push(videoObj);
+            });
+            onYouTubePlayerAPIReady();
+            function onYouTubePlayerAPIReady() {
+                for (var i = 0; i < playerInfoList.length; i++) {
+                    console.log(playerInfoList.length);
+                    player = new YT.Player('player' + [i], {
+                        height: '25%',
+                        width: '100%',
+                        videoId: playerInfoList[i].videoId
+                    });
+                }
             }
-        }
-    });
+        });
 
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
+        // 2. This code loads the IFrame Player API code asynchronously.
+        // Creates tag for the iFrame in the HTML before all other scripts
+        var tag = document.createElement('script');
 
-    tag.src = "https://www.youtube.com/iframe_api";
+        tag.src = "https://www.youtube.com/iframe_api";
 
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // End Youtube API 
+        // End Youtube API 
+    }
+
 
 })
 // End document ready
