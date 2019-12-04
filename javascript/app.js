@@ -1,4 +1,4 @@
-
+//variables for drawing canvas
 var canvas,
     context,
     dragging = false,
