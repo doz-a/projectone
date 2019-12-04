@@ -1,16 +1,15 @@
-$(document).ready(function(){
 
-    var canvas,
+var canvas,
     context,
     dragging = false,
     dragStartLocation,
     snapshot;
-   
+
 function getCanvasCoordinates(event) {
     var x = event.clientX - canvas.getBoundingClientRect().left,
         y = event.clientY - canvas.getBoundingClientRect().top;
 
-    return {x: x, y: y};
+    return { x: x, y: y };
 }
 
 function takeSnapshot() {
@@ -34,7 +33,7 @@ function dragStart(event) {
     dragStartLocation = getCanvasCoordinates(event);
     takeSnapshot();
 }
-function clearCanvas(canvas,context) {
+function clearCanvas() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 }
 function drag(event) {
@@ -66,4 +65,4 @@ function init() {
 }
 
 window.addEventListener('load', init, false);
-})
+
