@@ -62,8 +62,62 @@ $(document).ready(function () {
             }
         });
         // End ajax cocktailDB
+
     }
     // End populate drink list function 
+
+    // Start Youtube api 
+
+    // Make on click function that runs this when a populated drink name is clicked 
+    var playerInfoList = [];
+
+    $.ajax({
+        method: 'GET',
+        url: 'https://www.googleapis.com/youtube/v3/search?',
+        data: {
+
+            // Need to make a variable that inputs drink value here
+            q: 'how to make 69 special drink',
+            part: 'snippet',
+            key: 'AIzaSyDu5sqWjnseE6xRjMlm_d0v9P9GZPz26YM',
+            maxResults: 5
+        },
+        dataType: 'jsonp'
+
+    }).then(function (response) {
+        console.log(response);
+        var results = response.items;
+        $.each(results, function (index, value) {
+            var videoObj = {
+                id: 'player',
+                height: '',
+                width: '100%',
+                videoId: results[index].id.videoId
+            }
+            playerInfoList.push(videoObj);
+        });
+        onYouTubePlayerAPIReady();
+        function onYouTubePlayerAPIReady() {
+            for (var i = 0; i < playerInfoList.length; i++) {
+                player = new YT.Player('player' + [i], {
+                    height: '',
+                    width: '100%',
+                    videoId: playerInfoList[i].videoId
+                });
+            }
+        }
+    });
+
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // End Youtube API 
+
 })
 // End document ready
 

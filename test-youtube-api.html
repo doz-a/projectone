@@ -26,17 +26,22 @@
     <div id="player3"></div>
     <div id="player4"></div>
     <script>
+
+
+
         var playerInfoList = [];
+
         $.ajax({
             method: 'GET',
             url: 'https://www.googleapis.com/youtube/v3/search?',
             data: {
-                q: 'trump',
+                q: 'alcohol',
                 part: 'snippet',
                 key: 'AIzaSyDu5sqWjnseE6xRjMlm_d0v9P9GZPz26YM',
                 maxResults: 4
             },
             dataType: 'jsonp'
+
         }).then(function (response) {
             console.log(response);
             var results = response.items;
@@ -53,8 +58,8 @@
             function onYouTubePlayerAPIReady() {
                 for (var i = 0; i < playerInfoList.length; i++) {
                     player = new YT.Player('player' + [i], {
-                        height: '390',
-                        width: '640',
+                        height: '195',
+                        width: '320',
                         videoId: playerInfoList[i].videoId
                     });
                 }
@@ -63,9 +68,13 @@
 
         // 2. This code loads the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
+
         tag.src = "https://www.youtube.com/iframe_api";
+
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
     </script>
 </body>
 
