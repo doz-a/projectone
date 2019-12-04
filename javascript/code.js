@@ -3,14 +3,19 @@
 
 $(document).ready(function () {
 
+    // On document start, populates drink list with a search query of tequila
     populateDrinkList("tequila");
 
     // on click
     $("#ingredientButton").on("click", function () {
+
+        // Prevents clearing of textbox
         event.preventDefault();
-        // console.log("buttonworks");
+
         // This line grabs the input from the textbox
         var ingredient = $("#ingredientInput").val().trim();
+
+        // Populates drink list with a search query of user input 
         populateDrinkList(ingredient);
 
     });
@@ -21,22 +26,19 @@ $(document).ready(function () {
     function populateDrinkList(ingredient) {
 
         // Start ajax cocktailDB
-        // var ingredient = $("#ingredientInput").val().trim();
-        // console.log("capture input successful");
-        // var ingredient = "gin"
         var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingredient;
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
 
-            // Clears drink list every click 
+            // Clears drink list every click so it doesn't keep populating
             $("#drinkList").empty();
 
-            // Sets max drink count 
+            // Sets max drink count of appended drinks
             var drinkCount = 10;
 
-            // If drinks are less than max drink count, set to that number so no errors 
+            // If drinks are less than max drink count, set it to that number so no errors 
             if (response.drinks.length < 10) {
                 drinkCount = response.drinks.length;
             }
@@ -48,46 +50,31 @@ $(document).ready(function () {
                 // Append them to drink list 
                 $("#drinkList").append(
 
-                    // ES6 
+                    // Dynamically creates cards using ES6 (ECMAscript 6), which doesn't require template literals
                     `<div class="card w-50" data-name="${element.strDrink}" "id="${element.strDrink}">
                         <img src=${element.strDrinkThumb}  class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title">${element.strDrink}</h5>
                         </div>
                     </div>`
-                    // Clicking on generated cocktail image
-                    // Grab name of cocktail
-                    // Store as a variable (drinkClickName)
-                    // Input variable as the youtube ajax query 
-                    // Make youtube query a function
 
-                    // Append card working 
+                    // Dynamically creates cards using template literals (+ signs and lots of "")
                     // '<div class="card w-50"><img src="' + element.strDrinkThumb + '" class="card-img-top"><div class="card-body"><h6 class="card-title">' + element.strDrink + '</h6></div></div>'
 
-                    // "<div class='col-sm-4'>",
-                    // "<h5><p>" + element.strDrink + "</h5></p>",
-                    // "<img src ='" + element.strDrinkThumb + "'>",
-                    // "</div>"
                 );
             }
 
-            // Test click function 
-
-            // $(".card.w-50>img").on("click", function () {
+            // Adds a click function to the drink cards targeting the entire card 
             $(".card.w-50").on("click", function () {
-                console.log("buttonworks");
-                console.log(this.getAttribute('data-name'));
 
+                // Gets attribute name of the drink, and stores it in a variable 
                 var drinkNameClick = this.getAttribute('data-name');
 
+                // Runs youtube search using the name of the drink
                 populateVideos(drinkNameClick);
-                // On click, grab the name of the cocktail
-                // Store the name in a variable
-                // Put that variable in the youtube Query 
-                // Populate youtube box with youtube queries 
-
 
             });
+            // End card click function
 
         });
         // End ajax cocktailDB
@@ -95,22 +82,24 @@ $(document).ready(function () {
     }
     // End populate drink list function 
 
+    // Function that runs ajax api search for youtube videos
     function populateVideos(drinkNameClick) {
 
-
-        // Start Youtube api 
-
+        // Puts video in an array 
         var playerInfoList = [];
         $.ajax({
             method: 'GET',
             url: 'https://www.googleapis.com/youtube/v3/search?',
             data: {
 
-
+                // Queries youtube API using the drink name 
                 q: 'how to make ' + drinkNameClick + ' drink',
                 part: 'snippet',
 
+                // API key 
                 key: 'AIzaSyBBC9WvAnCLIpCD6YdzdhKFonnNLl8tUi4',
+
+                // Displays 4 videos not 5, not sure why number needs to be one higher to display desired amount 
                 maxResults: 5
             },
             dataType: 'jsonp'
@@ -121,6 +110,8 @@ $(document).ready(function () {
 
             // Value parameter required, but doesn't get read 
             $.each(results, function (index, value) {
+
+                // Video player parameters
                 var videoObj = {
                     id: 'player',
                     height: '25%',
@@ -130,12 +121,16 @@ $(document).ready(function () {
                     // This causes quota usage to only use 20 units instead of 200 :)
                     type: 'video'
                 }
+
+                // Pushes the video player parameters into the player list array 
                 playerInfoList.push(videoObj);
             });
             onYouTubePlayerAPIReady();
             function onYouTubePlayerAPIReady() {
                 for (var i = 0; i < playerInfoList.length; i++) {
                     console.log(playerInfoList.length);
+
+                    // Targets player ids in the HTML, and populates embedded video with iframe into them 
                     player = new YT.Player('player' + [i], {
                         height: '25%',
                         width: '100%',
@@ -145,8 +140,7 @@ $(document).ready(function () {
             }
         });
 
-        // 2. This code loads the IFrame Player API code asynchronously.
-        // Creates tag for the iFrame in the HTML before all other scripts
+        // Creates script tag for the iFrame, in the HTML before all other scripts
         var tag = document.createElement('script');
 
         tag.src = "https://www.youtube.com/iframe_api";
@@ -160,9 +154,3 @@ $(document).ready(function () {
 
 })
 // End document ready
-
-// link for search cocktail by name api : 
-// https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka
-
-// link for search cocktail by ingredient api :
-// https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin

@@ -24,7 +24,7 @@
     <div class="bg bg3"></div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand">Let's Have A Toast</a> <i class="fas fa-cocktail"></i>
+        <a class="navbar-brand">Prestiege World Wide Online Bartending School</a> <i class="fas fa-cocktail"></i>
 
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -35,10 +35,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./index.html">Home
+                        <!-- <span class="sr-only">(current)</span> -->
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./about.html">Link</a>
+                    <a class="nav-link" href="./about.html">About Us</a>
                 </li>
         </div>
     </nav>
@@ -70,24 +72,28 @@
                     <div class="row">
                         <div id="ingredientDiv">
                             <h3>
-                                Search by liquor/Ingredient:
+                                Search by Liquor/Ingredient to get started:
                             </h3>
                         </div>
 
-                        <div class="row">
-                            <input class="form-control" id="ingredientInput" type="text"
-                                placeholder="Search By Ingredient" aria-label="Search">
-                            <button id=ingredientButton> Submit </button>
-                        </div>
+                        <!-- <div class="row"> -->
+                        <input class="form-control" id="ingredientInput" type="text" placeholder="Search By Ingredient"
+                            aria-label="Search"> <button id="ingredientButton"> Submit </button>
+                        <!-- </div> -->
                     </div>
                 </div>
 
 
                 <div class="col-sm-6">
-                    <div class="row">
-                        <canvas id="canvas" width="100" height="100"></canvas>
-                        <input type="submit" value="Clear Sketchpad" onclick="clearCanvas(canvas,context);">
-                    </div>
+                    <!-- <div class="row"> -->
+                    <h3>
+                        Design a cocktail glass here:
+                    </h3>
+                    <canvas id="canvas" width="110" height="110"></canvas>
+                    <br>
+                    <input type="submit" value="Clear Sketchpad" id="sketchButton"
+                        onclick="clearCanvas(canvas,context);">
+                    <!-- </div> -->
                 </div>
 
 
@@ -144,7 +150,9 @@
     <footer class="page-footer font-small black">
 
         <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> PrestiegeWorldWide</a>
+            <a
+                href="https://www.google.com/maps?q=catalina+wine+mixer&rlz=1C1AWFC_enUS865US865&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjI05yx_ZzmAhXRrZ4KHYPiDhUQ_AUoBHoECA8QBg">
+                PrestiegeWorldWide</a>
         </div>
     </footer>
     </div>
