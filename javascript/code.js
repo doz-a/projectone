@@ -6,12 +6,14 @@ $(document).ready(function () {
     // on click
     $("#ingredientButton").on("click", function () {
         event.preventDefault();
-        console.log("buttonworks");
+        // console.log("buttonworks");
         // This line grabs the input from the textbox
         var ingredient = $("#ingredientInput").val().trim();
         populateDrinkList(ingredient);
 
     });
+
+
 
     // Populates Drink List function 
     function populateDrinkList(ingredient) {
@@ -43,44 +45,67 @@ $(document).ready(function () {
 
                 // Append them to drink list 
                 $("#drinkList").append(
+
+                    // ES6 
+                    `<div class="card w-50" id="${element.strDrink}">
+                        <img src=${element.strDrinkThumb} class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">${element.strDrink}</h5>
+                        </div>
+                    </div>`
+                    // Clicking on generated cocktail image
+                    // Grab name of cocktail
+                    // Store as a variable (drinkClickName)
+                    // Input variable as the youtube ajax query 
+                    // Make youtube query a function
+
+
+
+
+
+                    // Append card working 
+                    // '<div class="card w-50"><img src="' + element.strDrinkThumb + '" class="card-img-top"><div class="card-body"><h6 class="card-title">' + element.strDrink + '</h6></div></div>'
+
                     // "<div class='col-sm-4'>",
                     // "<h5><p>" + element.strDrink + "</h5></p>",
                     // "<img src ='" + element.strDrinkThumb + "'>",
                     // "</div>"
-
-                    // Append card here is broken 
-                    // '<div class="card w-50">',
-                    // '<img src="' + element.strDrinkThumb + '" class="card-img-top">',
-                    // '<div class="card-body">',
-                    // '<h5 class="card-title">' + element.strDrink + '</h5>',
-                    // '</div>',
-                    // '</div>',
-
-                    // Append card working 
-                    '<div class="card w-50"><img src="' + element.strDrinkThumb + '" class="card-img-top"><div class="card-body"><h6 class="card-title">' + element.strDrink + '</h6></div></div>'
                 );
             }
+
+            // Test click function 
+            $(".card.w-50>img").on("click", function () {
+                console.log("buttonworks");
+                // On click, grab the name of the cocktail
+                // Store the name in a variable
+                // Put that variable in the youtube Query 
+                // Populate youtube box with youtube queries 
+
+
+            });
+
         });
         // End ajax cocktailDB
 
     }
     // End populate drink list function 
 
+
     // Start Youtube api 
 
-    // Make on click function that runs this when a populated drink name is clicked 
     var playerInfoList = [];
-
     $.ajax({
         method: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search?',
         data: {
 
-            // Need to make a variable that inputs drink value here
-            q: 'how to make 69 special drink',
+
+            q: 'how to make long island ice tea drink',
             part: 'snippet',
-            key: 'AIzaSyDu5sqWjnseE6xRjMlm_d0v9P9GZPz26YM',
-            maxResults: 5
+
+            key: '',
+            // For testing purposes using 2
+            maxResults: 2
         },
         dataType: 'jsonp'
 
@@ -99,6 +124,7 @@ $(document).ready(function () {
         onYouTubePlayerAPIReady();
         function onYouTubePlayerAPIReady() {
             for (var i = 0; i < playerInfoList.length; i++) {
+                console.log(playerInfoList.length);
                 player = new YT.Player('player' + [i], {
                     height: '',
                     width: '100%',
@@ -126,18 +152,3 @@ $(document).ready(function () {
 
 // link for search cocktail by ingredient api :
 // https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin
-
-// ajax function to search for liquor preference 
-// liquor preference needs an input box 
-
-// ajax function to search for ingredient preference 
-// ingredient preference needs an input box 
-
-// append 10 drinks to the drinksList div
-// drink name
-// shows ingredients for each drink
-
-// append 5 tutorial videos to the youtube div each one gets a row 
-
-// MAKE SURE you're working in a branch! "git branch" in terminal to check if you're in the master or the branch
-// git pull origin master at each session that you begin! 
