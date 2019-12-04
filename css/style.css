@@ -1,3 +1,11 @@
+.navbar {
+    color: rgb(85, 0, 0);
+    background-color: white;    
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+
+}
+
 h1 {
     color: greenyellow;
     font-size: 102px;
@@ -5,7 +13,7 @@ h1 {
     /* color:greenyellow; */
     text-shadow: black;
     font-weight: 700;
-    font-family: cursive;
+    font-family: 'Quicksand', sans-serif;
     /* font-size: 100px; */
     background-color: beige;
     text-align: center;
@@ -19,7 +27,7 @@ canvas{
     position: absolute;
     top: 50px;
     left: 50px;
-    border: 1px solid gray;
+    border: 1px solid black;
 }
 /* img {
     max-width: 65px;
@@ -30,20 +38,44 @@ canvas{
     padding-top: 10.8%;
 }
 
+h1 {
+font-family: 'Quicksand', sans-serif;
+text-align: left;
+font-size: 100px;
+}
+
 h3 {
+    color: rgb(85, 0, 0);
+    font-family: 'Dosis', sans-serif;
     text-align: left;
+    font-size: 40px;
+}
+
+h4 {
+    color: rgb(85, 0, 0);
+    font-family: 'Dosis', sans-serif;
+    text-align: left;
+    font-size: 35px;
 }
 
 #nameButton {
-    color: yellowgreen;
+    color: rgb(85, 0, 0);
+    font-family: 'Quicksand', sans-serif;
+    
 }
 
 #ingredientButton {
-    color: yellowgreen;
+    color: rgb(85, 0, 0);
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 3%;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
 }
 
 .container {
-    width: 70%;
+    width: 90%;
     padding: 1%;
     background-color: beige;
     margin-top: 10%;
@@ -58,7 +90,8 @@ h3 {
 }
 
 h5 {
-    font: bold
+    color: rgb(85, 0, 0);
+    font-family: 'Quicksand', sans-serif;
 }
 
 /* body {
@@ -114,10 +147,6 @@ body {
     text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-
-h2 {
-    font-family: monospace;
 }
 
 @keyframes slide {
