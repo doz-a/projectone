@@ -6,6 +6,9 @@ $(document).ready(function () {
     // On document start, populates drink list with a search query of tequila
     populateDrinkList("tequila");
 
+    // On document start, populates youtube list with a search query of long island ice tea 
+    populateVideos("long island ice tea");
+
     // on click
     $("#ingredientButton").on("click", function () {
 
