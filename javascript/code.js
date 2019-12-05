@@ -100,6 +100,7 @@ $(document).ready(function () {
                 part: 'snippet',
 
                 // API key 
+
                 key: 'AIzaSyCeUFpT98eO4cX9_pvFhQ4Jd_ssX51Ojyo',
 
                 // Displays 4 videos not 5, not sure why number needs to be one higher to display desired amount 
