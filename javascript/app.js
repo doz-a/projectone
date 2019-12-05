@@ -11,7 +11,7 @@ function getCanvasCoordinates(event) {
 
     return { x: x, y: y };
 }
-
+ 
 function takeSnapshot() {
     snapshot = context.getImageData(0, 0, canvas.width, canvas.height);
 }
@@ -27,7 +27,7 @@ function drawLine(position) {
     context.lineTo(position.x, position.y);
     context.stroke();
 }
-
+//this function captures x and y coordinates when you drag the mouse
 function dragStart(event) {
     dragging = true;
     dragStartLocation = getCanvasCoordinates(event);
