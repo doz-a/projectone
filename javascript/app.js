@@ -4,14 +4,14 @@ var canvas,
     dragging = false,
     dragStartLocation,
     snapshot;
-
+//this function calculates the coordinates of the corners on the canvas
 function getCanvasCoordinates(event) {
     var x = event.clientX - canvas.getBoundingClientRect().left,
         y = event.clientY - canvas.getBoundingClientRect().top;
 
     return { x: x, y: y };
 }
-
+ 
 function takeSnapshot() {
     snapshot = context.getImageData(0, 0, canvas.width, canvas.height);
 }
@@ -27,7 +27,7 @@ function drawLine(position) {
     context.lineTo(position.x, position.y);
     context.stroke();
 }
-
+//this function captures x and y coordinates when you drag the mouse
 function dragStart(event) {
     dragging = true;
     dragStartLocation = getCanvasCoordinates(event);
