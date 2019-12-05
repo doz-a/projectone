@@ -4,7 +4,7 @@ var canvas,
     dragging = false,
     dragStartLocation,
     snapshot;
-
+//this function calculates the coordinates of the corners on the canvas
 function getCanvasCoordinates(event) {
     var x = event.clientX - canvas.getBoundingClientRect().left,
         y = event.clientY - canvas.getBoundingClientRect().top;
