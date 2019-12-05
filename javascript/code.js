@@ -6,8 +6,8 @@ $(document).ready(function () {
     // On document start, populates drink list with a search query of tequila
     populateDrinkList("tequila");
 
-    // On document start, populates youtube list with a search query of long island ice tea 
-    populateVideos("long island ice tea");
+    // broken On document start, populates youtube list with a search query of long island ice tea 
+    // populateVideos("long island ice tea");
 
     // on click
     $("#ingredientButton").on("click", function () {
@@ -100,7 +100,7 @@ $(document).ready(function () {
                 part: 'snippet',
 
                 // API key 
-                key: 'AIzaSyBBC9WvAnCLIpCD6YdzdhKFonnNLl8tUi4',
+                key: 'AIzaSyCeUFpT98eO4cX9_pvFhQ4Jd_ssX51Ojyo',
 
                 // Displays 4 videos not 5, not sure why number needs to be one higher to display desired amount 
                 maxResults: 5
