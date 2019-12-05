@@ -1,14 +1,14 @@
-<!-- MAKE SURE you're working in a branch! "git branch" in terminal to check if you're in the master or the branch -->
+## Prestige Worldwide
 
-<!-- git pull origin master at each session that you begin!  -->
+This Project is an open database predicated around the world of mixed drinks and cocktails that contains
+a variety of options by first getting started with searching liquor or ingredient of your choice, then 
+looking at a series of featured videos that teach you how to make famous drinks and cocktails, and
+then finally capping it off we have a canvas feature allowing design a cocktail glass of your choice.
 
+## Technology Used 
 
-# projectone
-Project one, first collaboration as a group!
-
-<!-- MAKE SURE you're working in a branch! "git branch" in terminal to check if you're in the master or the branch -->
-
-<!-- git pull origin master at each session that you begin!  -->
-
-## Important for working with API stuff
-* Make sure to grab important keys from .env
+* HTML
+* JAVASCRIPT 
+* CSS 
+* Youtube API
+* Jquery
