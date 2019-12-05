@@ -100,7 +100,7 @@ $(document).ready(function () {
                 part: 'snippet',
 
                 // API key 
-                key: 'AIzaSyBBC9WvAnCLIpCD6YdzdhKFonnNLl8tUi4',
+                key: 'AIzaSyDu5sqWjnseE6xRjMlm_d0v9P9GZPz26YM',
 
                 // Displays 4 videos not 5, not sure why number needs to be one higher to display desired amount 
                 maxResults: 5
