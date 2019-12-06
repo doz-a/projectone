@@ -1,9 +1,17 @@
+/* This is where the bootstrap navbar class is stylized */
+
 .navbar {
     color: rgb(85, 0, 0);
-    background-color: white;    
+    background-color: white;
     font-family: 'Dosis', sans-serif;
     font-size: 25px;
+}
 
+/* styles the card body when interacted with */
+
+.card.w-50:hover {
+    cursor: pointer;
+    opacity: .9;
 }
 
 h1 { 
@@ -13,8 +21,7 @@ h1 {
     color: greenyellow;
     font-size: 102px;
     -webkit-text-stroke: 2px black;
-    /* color:greenyellow; */
-    text-shadow: black;
+    text-shadow: rgb(54, 119, 0);
     font-weight: 700;
     font-family: 'Quicksand', sans-serif;
     /* font-size: 100px; */
@@ -33,40 +40,40 @@ canvas{
     left: 50px;
     border: 1px solid black;
 }
-/* img {
-    max-width: 65px;
-    max-height: 65px;
-} */
 
 #nameDiv {
     padding-top: 10.8%;
 }
 
+/* The heading of the "about us" page */
+
 h1 {
-font-family: 'Quicksand', sans-serif;
-text-align: left;
-font-size: 100px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 100px;
 }
 
 h3 {
     color: rgb(85, 0, 0);
     font-family: 'Dosis', sans-serif;
-    text-align: left;
+    text-align: center;
     font-size: 40px;
 }
 
 h4 {
     color: rgb(85, 0, 0);
     font-family: 'Dosis', sans-serif;
-    text-align: left;
+    text-align: center;
     font-size: 35px;
 }
+
 
 #nameButton {
     color: rgb(85, 0, 0);
     font-family: 'Quicksand', sans-serif;
-    
 }
+
+/* These are the id selectors to stylize the fonts to submit your search and clear the canvas */
 
 #ingredientButton {
     color: rgb(85, 0, 0);
@@ -76,7 +83,22 @@ h4 {
     padding-right: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
+    position: relative;
+    top: 50%;
+    left: 43%;
 }
+
+#sketchButton {
+    color: rgb(85, 0, 0);
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 3%;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+/* This is the container class that sets the margins of the middle of the page */
 
 .container {
     width: 90%;
@@ -89,18 +111,18 @@ h4 {
     outline-color: black;
 }
 
+/* The input class being stylized from the html for the search */
+
 .form-control {
+    margin-left: 10%;
     margin-right: 10%;
+    text-align: center;
 }
 
 h5 {
     color: rgb(85, 0, 0);
     font-family: 'Quicksand', sans-serif;
 }
-
-/* body {
-    background: url("./backgroundconfetti\ copy.jpg")
-} */
 
 /* MAKE SURE you're working in a branch! "git branch" in terminal to check if you're in the master or the branch */
 
@@ -112,12 +134,16 @@ html {
 
 body {
     margin: 0;
+    text-align: center;
 }
 
 .card-body {
     padding: 1px;
     text-align: center;
 }
+
+/* This is the class for the background animation it creates a multi-colored single animation */
+
 
 .bg {
     animation: slide 3s ease-in-out infinite alternate;
@@ -152,6 +178,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* This is a rule that specifices the animation to go back and forth */
 
 @keyframes slide {
     0% {
