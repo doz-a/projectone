@@ -6,7 +6,10 @@
 
 }
 
-h1 {
+h1 { 
+
+
+   
     color: greenyellow;
     font-size: 102px;
     -webkit-text-stroke: 2px black;
@@ -15,14 +18,15 @@ h1 {
     font-weight: 700;
     font-family: 'Quicksand', sans-serif;
     /* font-size: 100px; */
-    background-color: beige;
+    /* background-color: beige; */
     text-align: center;
-    width: 100%;
+    width: 100%; 
     outline: auto;
     outline-color: black;
     background-image: url(./cocktails2.jpg);
     ;
-}
+} 
+
 canvas{
     position: absolute;
     top: 50px;
@@ -157,3 +161,5 @@ body {
         transform: translateX(25%);
     }
 }
+
+
