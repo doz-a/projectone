@@ -7,7 +7,7 @@ $(document).ready(function () {
     populateDrinkList("tequila");
 
     // broken On document start, populates youtube list with a search query of long island ice tea 
-    // populateVideos("long island ice tea");
+    populateVideos("long island ice tea");
 
     // on click
     $("#ingredientButton").on("click", function () {
@@ -87,6 +87,15 @@ $(document).ready(function () {
 
     // Function that runs ajax api search for youtube videos
     function populateVideos(drinkNameClick) {
+
+        // Empty youtube div before populating
+        $("#youTube").empty();
+
+        // Append youtube videos to the div
+        $("#youTube").append(
+            '<div id="player1"></div><div id="player2"></div><div id="player3"></div><div id="player4"></div>'
+        );
+
 
         // Puts video in an array 
         var playerInfoList = [];
