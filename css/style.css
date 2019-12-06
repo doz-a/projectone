@@ -64,7 +64,6 @@ h4 {
     font-size: 35px;
 }
 
-
 #nameButton {
     color: rgb(85, 0, 0);
     font-family: 'Quicksand', sans-serif;
@@ -140,7 +139,6 @@ body {
 }
 
 /* This is the class for the background animation it creates a multi-colored single animation */
-
 
 .bg {
     animation: slide 3s ease-in-out infinite alternate;
