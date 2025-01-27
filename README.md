@@ -1,4 +1,4 @@
-## Prestiege Worldwide
+## Prestige Worldwide
 Instant Online Bartending School
 Version 1
 12/05/2019
